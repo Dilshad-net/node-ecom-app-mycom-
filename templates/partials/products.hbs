@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
+        <div id="success" class="alert alert-success" {{#if noMessage}}hidden{{/if}}>
+            {{successMsg}}
+        </div>
+    </div>
+</div>
+
+{{#each products}}
+<div class="row sm-mb-2">
+    {{# each this}}
+    <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fandroidforums.com%2Fthreads%2Flifeafter-zombie-survival-3rd-person-shooter-official-game-thread.1311833%2F&psig=AOvVaw0OTr5i4yYDeFpNLP0dUXEc&ust=1597428851153000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMC29LDkmOsCFQAAAAAdAAAAABAD" class="card-img-top" alt="products - img">
+            <div class="card-body">
+                <h5 class="card-title">{{ this.name }}</h5>
+                <p class="card-text"> {{ this.description }}</p>
+                <h4 class="text-body"> $ {{ this.price }} </h4>
+                <a href="/add_to_cart/{{this._id}}" class="btn btn-info">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+{{/each}}
